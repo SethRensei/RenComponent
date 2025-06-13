@@ -1,0 +1,9 @@
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenComponent\bin\Debug\RenComponent.dll
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenComponent\bin\Debug\RenComponent.pdb
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenComponent\obj\Debug\RenComponent.csproj.AssemblyReference.cache
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenComponent\obj\Debug\RenComponent.Properties.Resources.resources
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenComponent\obj\Debug\RenComponent.RenTextBox.resources
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenComponent\obj\Debug\RenComponent.csproj.GenerateResource.cache
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenComponent\obj\Debug\RenComponent.csproj.CoreCompileInputs.cache
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenComponent\obj\Debug\RenComponent.dll
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenComponent\obj\Debug\RenComponent.pdb
