@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pnlTitle = new RenComponent.RenPanel();
+            this.btnClose = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.cmbBoxAnimal = new RenComponent.UCRenComboBox();
             this.renTextBox3 = new RenComponent.RenTextBox();
             this.renTextBox2 = new RenComponent.RenTextBox();
@@ -45,9 +48,58 @@
             this.renPanel1 = new RenComponent.RenPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.renButton1 = new RenComponent.RenButton();
+            this.renEllipse1 = new RenComponent.RenEllipse();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pnlTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.renPanel2.SuspendLayout();
             this.renPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // pnlTitle
+            // 
+            this.pnlTitle.BackColor = System.Drawing.Color.Transparent;
+            this.pnlTitle.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlTitle.BorderRadius = 0;
+            this.pnlTitle.BorderSize = 2;
+            this.pnlTitle.Controls.Add(this.label4);
+            this.pnlTitle.Controls.Add(this.btnClose);
+            this.pnlTitle.Controls.Add(this.label3);
+            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitle.ForeColor = System.Drawing.Color.White;
+            this.pnlTitle.GradientAngle = 120F;
+            this.pnlTitle.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.pnlTitle.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnlTitle.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitle.Name = "pnlTitle";
+            this.pnlTitle.Size = new System.Drawing.Size(813, 46);
+            this.pnlTitle.TabIndex = 3;
+            this.pnlTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitle_MouseDown);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = global::RenTestComponent.Properties.Resources.Close;
+            this.btnClose.Location = new System.Drawing.Point(765, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(36, 36);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClose.TabIndex = 20;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("DejaVu Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(69, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 22);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "PANEL";
             // 
             // cmbBoxAnimal
             // 
@@ -75,7 +127,7 @@
         "Biche des palétuviers",
         "Bison d’Amérique",
         "Bison d’Amérique du Nord"};
-            this.cmbBoxAnimal.Location = new System.Drawing.Point(258, 244);
+            this.cmbBoxAnimal.Location = new System.Drawing.Point(258, 284);
             this.cmbBoxAnimal.Margin = new System.Windows.Forms.Padding(0);
             this.cmbBoxAnimal.Name = "cmbBoxAnimal";
             this.cmbBoxAnimal.Radius = 60;
@@ -96,7 +148,7 @@
             this.renTextBox3.BorderSize = 2;
             this.renTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.renTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.renTextBox3.Location = new System.Drawing.Point(258, 52);
+            this.renTextBox3.Location = new System.Drawing.Point(258, 92);
             this.renTextBox3.Margin = new System.Windows.Forms.Padding(4);
             this.renTextBox3.Multiline = true;
             this.renTextBox3.Name = "renTextBox3";
@@ -118,7 +170,7 @@
             this.renTextBox2.BorderSize = 2;
             this.renTextBox2.Font = new System.Drawing.Font("DejaVu Sans", 10F);
             this.renTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.renTextBox2.Location = new System.Drawing.Point(258, 204);
+            this.renTextBox2.Location = new System.Drawing.Point(258, 244);
             this.renTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.renTextBox2.Multiline = false;
             this.renTextBox2.Name = "renTextBox2";
@@ -141,7 +193,7 @@
             this.renTextBox1.BorderSize = 2;
             this.renTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.renTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.renTextBox1.Location = new System.Drawing.Point(258, 13);
+            this.renTextBox1.Location = new System.Drawing.Point(258, 53);
             this.renTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.renTextBox1.Multiline = false;
             this.renTextBox1.Name = "renTextBox1";
@@ -165,7 +217,7 @@
             this.renComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.renComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.renComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.renComboBox1.Location = new System.Drawing.Point(258, 326);
+            this.renComboBox1.Location = new System.Drawing.Point(258, 366);
             this.renComboBox1.Name = "renComboBox1";
             this.renComboBox1.Padding = new System.Windows.Forms.Padding(1);
             this.renComboBox1.Size = new System.Drawing.Size(200, 30);
@@ -177,7 +229,7 @@
             this.renDatePicker2.BorderColor = System.Drawing.Color.Black;
             this.renDatePicker2.BorderSize = 2;
             this.renDatePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.renDatePicker2.Location = new System.Drawing.Point(12, 166);
+            this.renDatePicker2.Location = new System.Drawing.Point(12, 206);
             this.renDatePicker2.MinimumSize = new System.Drawing.Size(4, 35);
             this.renDatePicker2.Name = "renDatePicker2";
             this.renDatePicker2.Size = new System.Drawing.Size(200, 35);
@@ -188,7 +240,7 @@
             // renToggleButton2
             // 
             this.renToggleButton2.AutoSize = true;
-            this.renToggleButton2.Location = new System.Drawing.Point(12, 275);
+            this.renToggleButton2.Location = new System.Drawing.Point(12, 315);
             this.renToggleButton2.MinimumSize = new System.Drawing.Size(45, 22);
             this.renToggleButton2.Name = "renToggleButton2";
             this.renToggleButton2.OffBackColor = System.Drawing.Color.Teal;
@@ -209,7 +261,7 @@
             this.renButton2.FlatAppearance.BorderSize = 0;
             this.renButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.renButton2.ForeColor = System.Drawing.Color.Black;
-            this.renButton2.Location = new System.Drawing.Point(12, 68);
+            this.renButton2.Location = new System.Drawing.Point(12, 108);
             this.renButton2.Name = "renButton2";
             this.renButton2.Size = new System.Drawing.Size(150, 40);
             this.renButton2.TabIndex = 9;
@@ -222,7 +274,7 @@
             this.renRadioButton2.AutoSize = true;
             this.renRadioButton2.Checked = true;
             this.renRadioButton2.CheckedColor = System.Drawing.Color.Red;
-            this.renRadioButton2.Location = new System.Drawing.Point(12, 335);
+            this.renRadioButton2.Location = new System.Drawing.Point(12, 375);
             this.renRadioButton2.MinimumSize = new System.Drawing.Size(0, 21);
             this.renRadioButton2.Name = "renRadioButton2";
             this.renRadioButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -244,7 +296,7 @@
             this.renPanel2.GradientAngle = 45F;
             this.renPanel2.GradientBottomColor = System.Drawing.Color.Cyan;
             this.renPanel2.GradientTopColor = System.Drawing.Color.Red;
-            this.renPanel2.Location = new System.Drawing.Point(588, 181);
+            this.renPanel2.Location = new System.Drawing.Point(588, 221);
             this.renPanel2.Name = "renPanel2";
             this.renPanel2.Size = new System.Drawing.Size(200, 148);
             this.renPanel2.TabIndex = 3;
@@ -263,7 +315,7 @@
             // renToggleButton1
             // 
             this.renToggleButton1.AutoSize = true;
-            this.renToggleButton1.Location = new System.Drawing.Point(12, 247);
+            this.renToggleButton1.Location = new System.Drawing.Point(12, 287);
             this.renToggleButton1.MinimumSize = new System.Drawing.Size(45, 22);
             this.renToggleButton1.Name = "renToggleButton1";
             this.renToggleButton1.OffBackColor = System.Drawing.Color.Gray;
@@ -278,7 +330,7 @@
             // 
             this.renRadioButton1.AutoSize = true;
             this.renRadioButton1.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.renRadioButton1.Location = new System.Drawing.Point(12, 308);
+            this.renRadioButton1.Location = new System.Drawing.Point(12, 348);
             this.renRadioButton1.MinimumSize = new System.Drawing.Size(0, 21);
             this.renRadioButton1.Name = "renRadioButton1";
             this.renRadioButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -293,7 +345,7 @@
             this.renDatePicker1.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.renDatePicker1.BorderSize = 0;
             this.renDatePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.renDatePicker1.Location = new System.Drawing.Point(12, 125);
+            this.renDatePicker1.Location = new System.Drawing.Point(12, 165);
             this.renDatePicker1.MinimumSize = new System.Drawing.Size(4, 35);
             this.renDatePicker1.Name = "renDatePicker1";
             this.renDatePicker1.Size = new System.Drawing.Size(200, 35);
@@ -312,7 +364,7 @@
             this.renPanel1.GradientAngle = 90F;
             this.renPanel1.GradientBottomColor = System.Drawing.Color.Transparent;
             this.renPanel1.GradientTopColor = System.Drawing.Color.Transparent;
-            this.renPanel1.Location = new System.Drawing.Point(588, 12);
+            this.renPanel1.Location = new System.Drawing.Point(588, 52);
             this.renPanel1.Name = "renPanel1";
             this.renPanel1.Size = new System.Drawing.Size(200, 148);
             this.renPanel1.TabIndex = 2;
@@ -338,7 +390,7 @@
             this.renButton1.FlatAppearance.BorderSize = 0;
             this.renButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.renButton1.ForeColor = System.Drawing.Color.White;
-            this.renButton1.Location = new System.Drawing.Point(12, 12);
+            this.renButton1.Location = new System.Drawing.Point(12, 52);
             this.renButton1.Name = "renButton1";
             this.renButton1.Size = new System.Drawing.Size(150, 40);
             this.renButton1.TabIndex = 0;
@@ -346,11 +398,31 @@
             this.renButton1.TextColor = System.Drawing.Color.White;
             this.renButton1.UseVisualStyleBackColor = false;
             // 
+            // renEllipse1
+            // 
+            this.renEllipse1.AllCornerRadius = 30;
+            this.renEllipse1.BottomLeft = 30;
+            this.renEllipse1.BottomRight = 30;
+            this.renEllipse1.TargetControl = this;
+            this.renEllipse1.TopLeft = 30;
+            this.renEllipse1.TopRight = 15;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("DejaVu Sans Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(21, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(258, 24);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "TEST REN COMPONENT";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 458);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(813, 458);
+            this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.cmbBoxAnimal);
             this.Controls.Add(this.renTextBox3);
             this.Controls.Add(this.renTextBox2);
@@ -366,10 +438,14 @@
             this.Controls.Add(this.renDatePicker1);
             this.Controls.Add(this.renPanel1);
             this.Controls.Add(this.renButton1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.pnlTitle.ResumeLayout(false);
+            this.pnlTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.renPanel2.ResumeLayout(false);
             this.renPanel2.PerformLayout();
             this.renPanel1.ResumeLayout(false);
@@ -398,6 +474,11 @@
         private RenComponent.RenTextBox renTextBox2;
         private RenComponent.RenTextBox renTextBox3;
         private RenComponent.UCRenComboBox cmbBoxAnimal;
+        private RenComponent.RenEllipse renEllipse1;
+        private RenComponent.RenPanel pnlTitle;
+        private System.Windows.Forms.PictureBox btnClose;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

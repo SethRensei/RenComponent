@@ -57,6 +57,9 @@
     <Compile Include="RenDatePicker.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RenEllipse.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RenPanel.cs">
       <SubType>Component</SubType>
     </Compile>

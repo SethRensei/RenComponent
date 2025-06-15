@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace RenTestComponent
@@ -44,6 +45,24 @@ namespace RenTestComponent
         private void CmbBoxAnimal_SelectedIndexChanged(object sender, EventArgs e)
         {
             MessageBox.Show($"Vous avez sélectionné : {cmbBoxAnimal.SelectedValue}");
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // Drap Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void pnlTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 
