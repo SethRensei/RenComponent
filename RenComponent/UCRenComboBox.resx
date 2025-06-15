@@ -117,20 +117,48 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="calendarDark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calendarDark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="TimerItem.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 4</value>
+  </metadata>
+  <metadata name="TimerItem2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>105, 4</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="iconComboBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
   </data>
-  <data name="calendarWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calendarWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Option" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Option.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>43</value>
+  </metadata>
 </root>

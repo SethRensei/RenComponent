@@ -7,3 +7,4 @@ C:\Users\sethz\Documents\VS Projects\RenComponent\RenComponent\obj\Debug\RenComp
 C:\Users\sethz\Documents\VS Projects\RenComponent\RenComponent\obj\Debug\RenComponent.csproj.CoreCompileInputs.cache
 C:\Users\sethz\Documents\VS Projects\RenComponent\RenComponent\obj\Debug\RenComponent.dll
 C:\Users\sethz\Documents\VS Projects\RenComponent\RenComponent\obj\Debug\RenComponent.pdb
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenComponent\obj\Debug\RenComponent.UCRenComboBox.resources

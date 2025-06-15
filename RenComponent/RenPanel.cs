@@ -11,6 +11,8 @@ namespace RenComponent
         private float gradientAngle = 90f;
         private Color gradientTopColor = Color.Transparent;
         private Color gradientBottomColor = Color.Transparent;
+        private int borderSize = 0;
+        private Color borderColor = Color.PaleVioletRed;
 
         // Constructor
         public RenPanel()
@@ -28,39 +30,66 @@ namespace RenComponent
             get => borderRadius;
             set { borderRadius = value; this.Invalidate(); }
             }
+        
         [Category("Ren Control")]
-        [Description("Angle of the gradient background in degrees.")]
+        [Description("Angle of the gradient background in degrees.")]        
         public float GradientAngle { 
             get => gradientAngle;
             set { gradientAngle = value; this.Invalidate(); }
             }
+        
         [Category("Ren Control")]
-        [Description("Top color of the gradient background.")]
+        [Description("Top color of the gradient background.")]        
         public Color GradientTopColor { 
             get => gradientTopColor; 
-            set { gradientTopColor = value; this.Invalidate(); }
+            set
+            {
+                gradientTopColor = value;
+                if (gradientTopColor != gradientBottomColor)
+                    this.BackColor = Color.Transparent;
+                this.Invalidate();
+            }
         }
+        
         [Category("Ren Control")]
         [Description("Bottom color of the gradient background.")]
         public Color GradientBottomColor { 
             get => gradientBottomColor;
-            set { gradientBottomColor = value; this.Invalidate(); }
+            set
+            {
+                gradientBottomColor = value;
+                if (gradientTopColor != gradientBottomColor)
+                    this.BackColor = Color.Transparent;
+                this.Invalidate();
             }
+        }
+
+        [Category("Ren Control")]
+        public int BorderSize
+        {
+            get => borderSize;
+            set
+            {
+                borderSize = value;
+                this.Invalidate(); //Redraw the control
+            }
+        }
+
+        [Category("Ren Control")]
+        public Color BorderColor
+        {
+            get => borderColor;
+            set
+            {
+                borderColor = value;
+                this.Invalidate(); //Redraw the control
+            }
+        }
 
         // Methode
         private GraphicsPath GetRenPath(RectangleF rectangle, float radius)
         {
             GraphicsPath path = new GraphicsPath();
-            //if (radius <= 0)
-            //    path.AddRectangle(rectangle);
-            //else
-            //{
-            //    path.AddArc(rectangle.X, rectangle.Y, radius, radius, 180, 90);
-            //    path.AddArc(rectangle.X + rectangle.Width - radius, rectangle.Y, radius, radius, 270, 90);
-            //    path.AddArc(rectangle.X + rectangle.Width - radius, rectangle.Y + rectangle.Height - radius, radius, radius, 0, 90);
-            //    path.AddArc(rectangle.X, rectangle.Y + rectangle.Height - radius, radius, radius, 90, 90);
-            //    path.CloseFigure();
-            //}
             path.StartFigure();
             path.AddArc(rectangle.Width - radius, rectangle.Height - radius, radius, radius, 0, 90);
             path.AddArc(rectangle.X, rectangle.Height - radius, radius, radius, 90, 90);
@@ -79,19 +108,39 @@ namespace RenComponent
             Graphics graphics = e.Graphics;
             graphics.FillRectangle(brush, ClientRectangle);
             RectangleF rectangleF = new RectangleF(0, 0, this.Width, this.Height);
+            Rectangle rectBorder = Rectangle.Inflate(this.ClientRectangle, -borderSize, -borderSize);
+            int smoothSize = 2;
+            if (borderSize > 0)
+                smoothSize = borderSize;
             if (borderRadius > 2)
             {
-                using(GraphicsPath path = GetRenPath(rectangleF, borderRadius))
-                using (Pen pen = new Pen(this.Parent.BackColor, 2))
+                using (GraphicsPath path = GetRenPath(rectangleF, borderRadius))
+                using (GraphicsPath pathBorder = GetRenPath(rectBorder, borderRadius - borderSize))
+                using (Pen penSurface = new Pen(this.Parent.BackColor, smoothSize))
+                using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
                     this.Region = new Region(path);
-                    e.Graphics.DrawPath(pen, path);
+                    e.Graphics.DrawPath(penSurface, path);
+                    //Button border                    
+                    if (borderSize >= 1)
+                        //Draw control border
+                        e.Graphics.DrawPath(penBorder, pathBorder);
                 }
             }
-            else  this.Region = new Region(rectangleF);
+            else
+            {
+                e.Graphics.SmoothingMode = SmoothingMode.None;
+                this.Region = new Region(rectangleF);
+                //Button border
+                if (borderSize >= 1)
+                {
+                    using (Pen penBorder = new Pen(borderColor, borderSize))
+                    {
+                        penBorder.Alignment = PenAlignment.Inset;
+                        e.Graphics.DrawRectangle(penBorder, 0, 0, this.Width - 1, this.Height - 1);
+                    }
+                }
+            }
         }
-
-
-        
     }
 }

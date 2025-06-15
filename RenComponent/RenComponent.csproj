@@ -72,6 +72,12 @@
     <Compile Include="RenToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UCRenComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRenComboBox.Designer.cs">
+      <DependentUpon>UCRenComboBox.cs</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -82,12 +88,24 @@
     <EmbeddedResource Include="RenTextBox.resx">
       <DependentUpon>RenTextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCRenComboBox.resx">
+      <DependentUpon>UCRenComboBox.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\calendarWhite.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\calendarDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Option.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
