@@ -23,7 +23,7 @@ namespace RenComponent
             this.Size = new Size(200, 100); // Set a default size
         }
 
-        // Properties to set border radius and gradient colors
+        #region Properties to set border radius and gradient colors
         [Category("Ren Control")]
         [Description("Border radius for rounded corners. Set to 0 for no rounding.")]
         public int BorderRadius { 
@@ -85,6 +85,7 @@ namespace RenComponent
                 this.Invalidate(); //Redraw the control
             }
         }
+        #endregion
 
         // Methode
         private GraphicsPath GetRenPath(RectangleF rectangle, float radius)

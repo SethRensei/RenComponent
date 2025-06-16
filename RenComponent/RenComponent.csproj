@@ -51,6 +51,9 @@
     <Compile Include="RenButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RenCircularProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="RenComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>

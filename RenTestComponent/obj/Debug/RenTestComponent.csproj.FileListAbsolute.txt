@@ -11,4 +11,3 @@ C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\obj\Debug\Ren
 C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\obj\Debug\RenTestC.10A4B679.Up2Date
 C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\obj\Debug\RenTestComponent.exe
 C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\obj\Debug\RenTestComponent.pdb
-C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\obj\Debug\RenTestComponent.exe.config

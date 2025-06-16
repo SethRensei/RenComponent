@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.renCircularProgressBar3 = new RenComponent.RenCircularProgressBar();
+            this.renCircularProgressBar2 = new RenComponent.RenCircularProgressBar();
+            this.renCircularProgressBar1 = new RenComponent.RenCircularProgressBar();
             this.pnlTitle = new RenComponent.RenPanel();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbBoxAnimal = new RenComponent.UCRenComboBox();
@@ -49,12 +55,62 @@
             this.label1 = new System.Windows.Forms.Label();
             this.renButton1 = new RenComponent.RenButton();
             this.renEllipse1 = new RenComponent.RenEllipse();
-            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.renPanel2.SuspendLayout();
             this.renPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(25, 518);
+            this.trackBar1.Maximum = 100;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(299, 45);
+            this.trackBar1.TabIndex = 22;
+            this.trackBar1.Scroll += new System.EventHandler(this.TrackBar1_Scroll);
+            // 
+            // renCircularProgressBar3
+            // 
+            this.renCircularProgressBar3.BorderSize = 3;
+            this.renCircularProgressBar3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.renCircularProgressBar3.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.renCircularProgressBar3.Location = new System.Drawing.Point(224, 412);
+            this.renCircularProgressBar3.MiddleCircleColor = System.Drawing.SystemColors.Desktop;
+            this.renCircularProgressBar3.Name = "renCircularProgressBar3";
+            this.renCircularProgressBar3.OuterCircleColor = System.Drawing.Color.Transparent;
+            this.renCircularProgressBar3.Size = new System.Drawing.Size(100, 100);
+            this.renCircularProgressBar3.TabIndex = 21;
+            this.renCircularProgressBar3.UnfilledCircleColor = System.Drawing.SystemColors.ActiveCaption;
+            this.renCircularProgressBar3.ValueSize = 2.947F;
+            // 
+            // renCircularProgressBar2
+            // 
+            this.renCircularProgressBar2.BorderSize = 5;
+            this.renCircularProgressBar2.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.renCircularProgressBar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.renCircularProgressBar2.Location = new System.Drawing.Point(118, 412);
+            this.renCircularProgressBar2.MiddleCircleColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.renCircularProgressBar2.Name = "renCircularProgressBar2";
+            this.renCircularProgressBar2.OuterCircleColor = System.Drawing.Color.Transparent;
+            this.renCircularProgressBar2.Size = new System.Drawing.Size(100, 100);
+            this.renCircularProgressBar2.TabIndex = 20;
+            this.renCircularProgressBar2.UnfilledCircleColor = System.Drawing.Color.Black;
+            this.renCircularProgressBar2.ValueSize = 90F;
+            // 
+            // renCircularProgressBar1
+            // 
+            this.renCircularProgressBar1.Font = new System.Drawing.Font("DejaVu Math TeX Gyre", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.renCircularProgressBar1.ForeColor = System.Drawing.Color.PaleVioletRed;
+            this.renCircularProgressBar1.Location = new System.Drawing.Point(12, 412);
+            this.renCircularProgressBar1.MiddleCircleColor = System.Drawing.Color.PaleVioletRed;
+            this.renCircularProgressBar1.Name = "renCircularProgressBar1";
+            this.renCircularProgressBar1.OuterCircleColor = System.Drawing.Color.Black;
+            this.renCircularProgressBar1.Size = new System.Drawing.Size(100, 100);
+            this.renCircularProgressBar1.TabIndex = 19;
+            this.renCircularProgressBar1.UnfilledCircleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.renCircularProgressBar1.ValueSize = 55.57F;
             // 
             // pnlTitle
             // 
@@ -76,12 +132,23 @@
             this.pnlTitle.TabIndex = 3;
             this.pnlTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitle_MouseDown);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("DejaVu Sans Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(21, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(258, 24);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "TEST REN COMPONENT";
+            // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Image = global::RenTestComponent.Properties.Resources.Close;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.Location = new System.Drawing.Point(765, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(36, 36);
@@ -115,7 +182,7 @@
             this.cmbBoxAnimal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBoxAnimal.ForeColor = System.Drawing.Color.White;
             this.cmbBoxAnimal.GradientAngle = 90F;
-            this.cmbBoxAnimal.Icon = global::RenTestComponent.Properties.Resources.Animals;
+            this.cmbBoxAnimal.Icon = ((System.Drawing.Image)(resources.GetObject("cmbBoxAnimal.Icon")));
             this.cmbBoxAnimal.Items = new string[] {
         "Basilic vert",
         "Bec-en-sabot du Nil",
@@ -407,21 +474,14 @@
             this.renEllipse1.TopLeft = 30;
             this.renEllipse1.TopRight = 15;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("DejaVu Sans Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(21, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(258, 24);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "TEST REN COMPONENT";
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(813, 458);
+            this.ClientSize = new System.Drawing.Size(813, 575);
+            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.renCircularProgressBar3);
+            this.Controls.Add(this.renCircularProgressBar2);
+            this.Controls.Add(this.renCircularProgressBar1);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.cmbBoxAnimal);
             this.Controls.Add(this.renTextBox3);
@@ -443,6 +503,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
@@ -479,6 +540,10 @@
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private RenComponent.RenCircularProgressBar renCircularProgressBar3;
+        private RenComponent.RenCircularProgressBar renCircularProgressBar2;
+        private RenComponent.RenCircularProgressBar renCircularProgressBar1;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
 
