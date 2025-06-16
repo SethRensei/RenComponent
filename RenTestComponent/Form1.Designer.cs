@@ -467,7 +467,7 @@
             // 
             // renEllipse1
             // 
-            this.renEllipse1.AllCornerRadius = 30;
+            this.renEllipse1.AllCornerRadius = 0;
             this.renEllipse1.BottomLeft = 30;
             this.renEllipse1.BottomRight = 30;
             this.renEllipse1.TargetControl = this;
@@ -535,7 +535,6 @@
         private RenComponent.RenTextBox renTextBox2;
         private RenComponent.RenTextBox renTextBox3;
         private RenComponent.UCRenComboBox cmbBoxAnimal;
-        private RenComponent.RenEllipse renEllipse1;
         private RenComponent.RenPanel pnlTitle;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Label label3;
@@ -544,6 +543,7 @@
         private RenComponent.RenCircularProgressBar renCircularProgressBar2;
         private RenComponent.RenCircularProgressBar renCircularProgressBar1;
         private System.Windows.Forms.TrackBar trackBar1;
+        private RenComponent.RenEllipse renEllipse1;
     }
 }
 

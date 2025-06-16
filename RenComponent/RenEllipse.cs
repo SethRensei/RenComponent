@@ -12,7 +12,7 @@ namespace RenComponent
         private Control _target;
         private EventHandler _resizeHandler;
 
-        private int _cornerRadius = 5;
+        private int _cornerRadius = 0;
         private int _cornerTopLeft = 5;
         private int _cornerTopRight = 5;
         private int _cornerBottomRight = 5;
@@ -20,10 +20,33 @@ namespace RenComponent
 
         private bool useUnifiedRadius = true;
 
+        #region Properties
+
+        [Category("Behavior")]
+        [Description("The control to apply the rounded corners to.")]
+        public Control TargetControl
+        {
+            get => _target;
+            set
+            {
+                if (_target != null)
+                {
+                    _target.SizeChanged -= _resizeHandler;
+                    _target.Region?.Dispose();
+                }
+                _target = value;
+                if (_target != null)
+                {
+                    _resizeHandler = (s, e) => ApplyRoundedRegion();
+                    _target.SizeChanged += _resizeHandler;
+                    ApplyRoundedRegion();
+                }
+            }
+        }
+
         [Category("Ren Control")]
         [RefreshProperties(RefreshProperties.All)]
         [Description("Unified corner radius for all corners. If set, overrides individual corner settings.")]
-        [DefaultValue(5)]
         public int AllCornerRadius
         {
             get => useUnifiedRadius ? _cornerRadius : 0;
@@ -80,16 +103,18 @@ namespace RenComponent
             get => _cornerBottomLeft;
             set => SetIndividualCorner(ref _cornerBottomLeft, value);
         }
+        #endregion
 
+        #region Methods
         private void SetIndividualCorner(ref int cornerField, int value)
         {
             int newVal = Math.Max(0, value);
             if (cornerField == newVal) return;
             cornerField = newVal;
             // if any individual differs, disable unified radius
-            if (!(_cornerTopLeft == _cornerTopRight &&
+            if (_cornerTopLeft == _cornerTopRight &&
                   _cornerTopLeft == _cornerBottomRight &&
-                  _cornerTopLeft == _cornerBottomLeft))
+                  _cornerTopLeft == _cornerBottomLeft)
             {
                 useUnifiedRadius = true;
                 _cornerRadius = _cornerTopLeft;
@@ -112,28 +137,6 @@ namespace RenComponent
             TargetControl = ctrl;
         }
         public int GetCornerRadius(Control ctrl) => AllCornerRadius;
-
-        [Category("Behavior")]
-        [Description("The control to apply the rounded corners to.")]
-        public Control TargetControl
-        {
-            get => _target;
-            set
-            {
-                if (_target != null)
-                {
-                    _target.SizeChanged -= _resizeHandler;
-                    _target.Region?.Dispose();
-                }
-                _target = value;
-                if (_target != null)
-                {
-                    _resizeHandler = (s, e) => ApplyRoundedRegion();
-                    _target.SizeChanged += _resizeHandler;
-                    ApplyRoundedRegion();
-                }
-            }
-        }
 
         private void ApplyRoundedRegion()
         {
@@ -170,6 +173,7 @@ namespace RenComponent
                 _target.Region = new Region(path);
             }
         }
+        #endregion
 
         protected override void Dispose(bool disposing)
         {
