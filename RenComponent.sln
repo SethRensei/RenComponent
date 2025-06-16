@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36109.1 d17.14
+VisualStudioVersion = 17.14.36109.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenComponent", "RenComponent\RenComponent.csproj", "{BC281723-C6FD-4BDC-882B-DC9D0E5780E2}"
 EndProject
@@ -15,12 +15,12 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BC281723-C6FD-4BDC-882B-DC9D0E5780E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC281723-C6FD-4BDC-882B-DC9D0E5780E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC281723-C6FD-4BDC-882B-DC9D0E5780E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC281723-C6FD-4BDC-882B-DC9D0E5780E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC281723-C6FD-4BDC-882B-DC9D0E5780E2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC281723-C6FD-4BDC-882B-DC9D0E5780E2}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{2882B0D2-C8C4-47F8-BB7B-23A1DA7FE344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2882B0D2-C8C4-47F8-BB7B-23A1DA7FE344}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2882B0D2-C8C4-47F8-BB7B-23A1DA7FE344}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2882B0D2-C8C4-47F8-BB7B-23A1DA7FE344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2882B0D2-C8C4-47F8-BB7B-23A1DA7FE344}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2882B0D2-C8C4-47F8-BB7B-23A1DA7FE344}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

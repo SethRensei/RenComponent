@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("RenComponent")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Seth Rensei")]
 [assembly: AssemblyProduct("RenComponent")]
-[assembly: AssemblyCopyright("Copyright ©  2025")]
+[assembly: AssemblyCopyright("Copyright ©  2025 Seth Rensei")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
