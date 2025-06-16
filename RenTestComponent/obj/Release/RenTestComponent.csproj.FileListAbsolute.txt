@@ -1,0 +1,13 @@
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\bin\Release\RenTestComponent.exe.config
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\bin\Release\RenTestComponent.exe
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\bin\Release\RenTestComponent.pdb
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\bin\Release\RenComponent.dll
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\bin\Release\RenComponent.pdb
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\obj\Release\RenTestComponent.csproj.AssemblyReference.cache
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\obj\Release\RenTestComponent.Form1.resources
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\obj\Release\RenTestComponent.Properties.Resources.resources
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\obj\Release\RenTestComponent.csproj.GenerateResource.cache
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\obj\Release\RenTestComponent.csproj.CoreCompileInputs.cache
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\obj\Release\RenTestC.10A4B679.Up2Date
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\obj\Release\RenTestComponent.exe
+C:\Users\sethz\Documents\VS Projects\RenComponent\RenTestComponent\obj\Release\RenTestComponent.pdb
