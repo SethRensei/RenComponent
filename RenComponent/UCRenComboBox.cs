@@ -15,7 +15,6 @@ namespace RenComponent
 
         int i = 0;
         private int listHeight = 229; // Height of the dropdown list
-        private int comboBoxHeight; // Height of the combobox
         private string _displayMember;
         private string _valueMember;
         private IEnumerable _dataSource;
@@ -24,7 +23,6 @@ namespace RenComponent
         public UCRenComboBox()
         {
             InitializeComponent();
-            this.comboBoxHeight = this.Height;
         }
 
 
@@ -36,19 +34,6 @@ namespace RenComponent
             {
                 listHeight = value;
                 pnlItem.Height = listHeight;
-                this.Invalidate(); //Redraw the control
-            }
-        }
-
-        [Category("Ren Contorl")]
-        public int ComboBoxHeight
-        {
-            get => comboBoxHeight;
-            set
-            {
-                comboBoxHeight = value;
-                this.Height = comboBoxHeight;
-                pnlTitle.Height = comboBoxHeight - 1;
                 this.Invalidate(); //Redraw the control
             }
         }

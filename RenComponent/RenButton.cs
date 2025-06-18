@@ -52,13 +52,6 @@ namespace RenComponent
             set { this.BackColor = value; }
         }
 
-        [Category("Ren Control")]
-        public Color TextColor
-        {
-            get { return this.ForeColor; }
-            set { this.ForeColor = value; }
-        }
-
         public RenButton()
         {
             this.FlatStyle = FlatStyle.Flat;

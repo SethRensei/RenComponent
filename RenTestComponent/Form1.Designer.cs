@@ -175,7 +175,6 @@
             this.cmbBoxAnimal.BarColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(239)))), ((int)(((byte)(221)))));
             this.cmbBoxAnimal.CmbBoxGradientBottomColor = System.Drawing.Color.Transparent;
             this.cmbBoxAnimal.CmbBoxGradientTopColor = System.Drawing.Color.Transparent;
-            this.cmbBoxAnimal.ComboBoxHeight = 60;
             this.cmbBoxAnimal.DataSource = null;
             this.cmbBoxAnimal.DisplayMember = null;
             this.cmbBoxAnimal.DropdownHeight = 100;
@@ -333,7 +332,6 @@
             this.renButton2.Size = new System.Drawing.Size(150, 40);
             this.renButton2.TabIndex = 9;
             this.renButton2.Text = "renButton2";
-            this.renButton2.TextColor = System.Drawing.Color.Black;
             this.renButton2.UseVisualStyleBackColor = false;
             // 
             // renRadioButton2
@@ -462,7 +460,6 @@
             this.renButton1.Size = new System.Drawing.Size(150, 40);
             this.renButton1.TabIndex = 0;
             this.renButton1.Text = "renButton1";
-            this.renButton1.TextColor = System.Drawing.Color.White;
             this.renButton1.UseVisualStyleBackColor = false;
             // 
             // renEllipse1

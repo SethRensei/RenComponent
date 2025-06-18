@@ -69,7 +69,7 @@
             this.pnlItem.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
             this.pnlItem.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
             this.pnlItem.Location = new System.Drawing.Point(0, 60);
-            this.pnlItem.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.pnlItem.Margin = new System.Windows.Forms.Padding(0, 11, 0, 0);
             this.pnlItem.Name = "pnlItem";
             this.pnlItem.Padding = new System.Windows.Forms.Padding(5);
             this.pnlItem.Size = new System.Drawing.Size(300, 229);
@@ -103,7 +103,7 @@
             this.pnlTitle.GradientBottomColor = System.Drawing.Color.Transparent;
             this.pnlTitle.GradientTopColor = System.Drawing.Color.Transparent;
             this.pnlTitle.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitle.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.pnlTitle.Margin = new System.Windows.Forms.Padding(0);
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(300, 60);
             this.pnlTitle.TabIndex = 0;
@@ -123,8 +123,7 @@
             // 
             // txtComboBox
             // 
-            this.txtComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtComboBox.ForeColor = System.Drawing.Color.White;
             this.txtComboBox.Location = new System.Drawing.Point(49, 26);
@@ -179,7 +178,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "UCRenComboBox";
-            this.Size = new System.Drawing.Size(300, 60);
+            this.Size = new System.Drawing.Size(300, 368);
             this.pnlItem.ResumeLayout(false);
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
