@@ -7,6 +7,8 @@ using System.Windows.Forms;
 
 namespace RenComponent
 {
+    [ToolboxItem(true)]
+    [Category("RenComponent")]
     public class RenEllipse : Component, IExtenderProvider
     {
         private Control _target;

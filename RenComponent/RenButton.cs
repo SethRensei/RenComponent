@@ -6,6 +6,8 @@ using System.ComponentModel;
 
 namespace RenComponent
 {
+    [ToolboxItem(true)]
+    [Category("RenComponent")]
     public class RenButton : Button
     {
         //Fields

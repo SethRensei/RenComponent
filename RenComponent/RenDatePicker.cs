@@ -6,6 +6,8 @@ using System.Windows.Forms;
 
 namespace RenComponent
 {
+    [ToolboxItem(true)]
+    [Category("RenComponent")]
     public class RenDatePicker : DateTimePicker
     {
         //Fields

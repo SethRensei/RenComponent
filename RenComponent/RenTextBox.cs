@@ -6,6 +6,8 @@ using System.Drawing.Drawing2D;
 
 namespace RenComponent
 {
+    [ToolboxItem(true)]
+    [Category("RenComponent")]
     public partial class RenTextBox : UserControl
     {
         #region -> Fields

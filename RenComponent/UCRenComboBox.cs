@@ -7,6 +7,8 @@ using System.Windows.Forms;
 
 namespace RenComponent
 {
+    [ToolboxItem(true)]
+    [Category("RenComponent")]
     public partial class UCRenComboBox : UserControl
     {
         // Événement déclenché lors du changement de sélection

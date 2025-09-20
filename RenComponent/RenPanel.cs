@@ -5,6 +5,8 @@ using System.Windows.Forms;
 
 namespace RenComponent
 {
+    [ToolboxItem(true)]
+    [Category("RenComponent")]
     public class RenPanel : Panel
     {
         private int borderRadius = 0;

@@ -6,6 +6,8 @@ using System.Windows.Forms;
 
 namespace RenComponent
 {
+    [ToolboxItem(true)]
+    [Category("RenComponent")]
     public class RenCircularProgressBar : UserControl
     {
         private float valueSize = 40;

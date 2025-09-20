@@ -8,6 +8,8 @@ using System.Drawing.Design;
 namespace RenComponent
 {
     [DefaultEvent("OnSelectedIndexChanged")]
+    [ToolboxItem(true)]
+    [Category("RenComponent")]
     public class RenComboBox : UserControl
     {
         #region -> Fields
