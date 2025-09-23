@@ -16,17 +16,12 @@ namespace RenComponent
         private int currentPage = 1;
         private int totalPages = 1;
         private int pageSize = 10;
-        private Size btnSize = new Size(40, 35);
+
+        private Size btnSize = new Size(35, 35);
         private Color btnBackColor = Color.MediumSlateBlue;
-        private Color btnForeColor = Color.White;
+        private Color btnForeColor = Color.White, btnBoderColor = Color.MediumSlateBlue;
         private Font btnFont = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-        private int btnTop = 3, infoTop = 15;
-
-
-        private DataGridView dataGridView1;
-        private Panel panelPagination;
-        private Button btnFirst, btnPrev, btnNext, btnLast;
-        private Label lblPageInfo;
+        private int btnBorderRadius = 0, btnBorderSize = 0;
 
         public PaginatedDataGridView()
         {
@@ -64,7 +59,25 @@ namespace RenComponent
         [Description("Internal DataGridView you can fully customize.")]
         public DataGridView DataGrid => dataGridView1;
 
-        
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+        [Category("Ren Control")]
+        [Description("Color of page info.")]
+        public Color PageInfoForeColor
+        {
+            get => lblPageInfo.ForeColor;
+            set => lblPageInfo.ForeColor = value;
+        }
+
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+        [Category("Ren Control")]
+        [Description("Color of page info.")]
+        public Font PageInfoFont
+        {
+            get => lblPageInfo.Font;
+            set => lblPageInfo.Font = value;
+        }
+
 
         [Category("Ren Control")]
         [Description("Size of pagination buttons.")]
@@ -127,29 +140,47 @@ namespace RenComponent
         }
 
         [Category("Ren Control")]
-        [Description("Top position of pagination buttons.")]
-        public int ButtonTop
+        [Description("Border radius of pagination buttons.")]
+        public int ButtonBorderRadius
         {
-            get => btnTop;
+            get => btnBorderRadius;
             set
             {
-                btnTop = value;
+                btnBorderRadius = value;
                 foreach (var btn in new[] { btnFirst, btnPrev, btnNext, btnLast })
                 {
-                    btn.Top = btnTop;
+                    btn.BorderRadius = value;
                 }
             }
         }
 
         [Category("Ren Control")]
-        [Description("Top position of page info label.")]
-        public int PageInfoTop
+        [Description("Border size of pagination buttons.")]
+        public int ButtonBorderSize
         {
-            get => infoTop;
+            get => btnBorderSize;
             set
             {
-                infoTop = value;
-                lblPageInfo.Top = infoTop;
+                btnBorderSize = value;
+                foreach (var btn in new[] { btnFirst, btnPrev, btnNext, btnLast })
+                {
+                    btn.BorderSize = value;
+                }
+            }
+        }
+
+        [Category("Ren Control")]
+        [Description("Border color of pagination buttons.")]
+        public Color ButtonBorderColor
+        {
+            get => btnBoderColor;
+            set
+            {
+                btnBoderColor = value;
+                foreach (var btn in new[] { btnFirst, btnPrev, btnNext, btnLast })
+                {
+                    btn.BorderColor = value;
+                }
             }
         }
 
@@ -189,87 +220,19 @@ namespace RenComponent
         private void SetupLayout()
         {
             // DataGridView
-            dataGridView1 = new DataGridView
-            {
-                Dock = DockStyle.Fill,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
-                AllowUserToAddRows = false,
-                BackgroundColor = BackColor,
-                AllowUserToDeleteRows = false,
-                BorderStyle = BorderStyle.None,
-                RowHeadersVisible = false,
-                ReadOnly = false
-            };
+            dataGridView1.BackgroundColor = BackColor;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridView1.ColumnHeadersHeight = 35;
 
-            // Panel pagination
-            panelPagination = new Panel
-            {
-                Dock = DockStyle.Bottom,
-                Height = 45,
-                BackColor = Color.Transparent
-            };
-
-            // Création des boutons
-            btnFirst = CreateRenButton("<<", 5);
-            btnPrev = CreateRenButton("◀", 50);
-            btnNext = CreateRenButton("▶", 95);
-            btnLast = CreateRenButton(">>", 140);
-
-            // Label info
-            lblPageInfo = new Label
-            {
-                AutoSize = true,
-                Left = 180,
-                Top = infoTop,
-                Font = Font,
-                ForeColor = ForeColor,
-                Text = "Page 0 / 0",
-                Margin = new Padding(10, 0, 10, 0)
-            };
 
             // Gestion clics
             btnFirst.Click += (s, e) => { CurrentPage = 1; RefreshPagination(); };
             btnPrev.Click += (s, e) => { if (CurrentPage > 1) CurrentPage--; RefreshPagination(); };
             btnNext.Click += (s, e) => { if (CurrentPage < TotalPages) CurrentPage++; RefreshPagination(); };
             btnLast.Click += (s, e) => { CurrentPage = TotalPages; RefreshPagination(); };
-
-            // Ajout des contrôles
-            panelPagination.Controls.Add(btnFirst);
-            panelPagination.Controls.Add(btnPrev);
-            panelPagination.Controls.Add(btnNext);
-            panelPagination.Controls.Add(btnLast);
-            panelPagination.Controls.Add(lblPageInfo);
-
-            //panelPagination.Controls.Add(tableLayout);
-
-            Controls.Add(dataGridView1);
-            Controls.Add(panelPagination);
-        }
-
-        private Button CreateRenButton(string text, int letf)
-        {
-            var btn = new Button
-            {
-                Text = text,
-                Size = btnSize,
-                Top = 3,
-                Left = letf,
-                Font = btnFont,
-                BackColor = btnBackColor,
-                FlatStyle = FlatStyle.Flat,
-                UseVisualStyleBackColor = false
-            };
-
-            btn.FlatAppearance.BorderSize = 0;
-
-            ApplyDefaultStyle(btn);
-            return btn;
-        }
-
-        private void ApplyDefaultStyle(Button btn)
-        {
-            btn.BackColor = Color.MediumSlateBlue;
-            btn.ForeColor = Color.White;
+            
         }
 
         private void RefreshPagination()
@@ -319,11 +282,10 @@ namespace RenComponent
         private void PDGVFontChanged(object sender, EventArgs e)
         {
             lblPageInfo.Font = Font;
-            panelPagination.Height = 45;
             foreach (var btn in new[] { btnFirst, btnPrev, btnNext, btnLast })
             {
-                btn.Font = Font;
-                btn.Size = btnSize;
+                btn.Font = btnFont;
+                btn.Size = new Size(35, 35);
             }
         }
 
