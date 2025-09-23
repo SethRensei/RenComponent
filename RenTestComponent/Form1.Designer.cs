@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.paginatedDataGridView1 = new RenComponent.PaginatedDataGridView();
             this.renCircularProgressBar3 = new RenComponent.RenCircularProgressBar();
             this.renCircularProgressBar2 = new RenComponent.RenCircularProgressBar();
             this.renCircularProgressBar1 = new RenComponent.RenCircularProgressBar();
@@ -56,6 +58,7 @@
             this.renButton1 = new RenComponent.RenButton();
             this.renEllipse1 = new RenComponent.RenEllipse();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paginatedDataGridView1.DataGrid)).BeginInit();
             this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.renPanel2.SuspendLayout();
@@ -70,6 +73,48 @@
             this.trackBar1.Size = new System.Drawing.Size(299, 45);
             this.trackBar1.TabIndex = 22;
             this.trackBar1.Scroll += new System.EventHandler(this.TrackBar1_Scroll);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(36, 584);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // paginatedDataGridView1
+            // 
+            this.paginatedDataGridView1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.paginatedDataGridView1.ButtonBackColor = System.Drawing.Color.MediumSlateBlue;
+            this.paginatedDataGridView1.ButtonFont = new System.Drawing.Font("Segoe UI", 9F);
+            this.paginatedDataGridView1.ButtonForeColor = System.Drawing.Color.White;
+            this.paginatedDataGridView1.ButtonSize = new System.Drawing.Size(35, 35);
+            this.paginatedDataGridView1.ButtonTop = 3;
+            // 
+            // 
+            // 
+            this.paginatedDataGridView1.DataGrid.AllowUserToAddRows = false;
+            this.paginatedDataGridView1.DataGrid.AllowUserToDeleteRows = false;
+            this.paginatedDataGridView1.DataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.paginatedDataGridView1.DataGrid.BackgroundColor = System.Drawing.Color.DarkSlateGray;
+            this.paginatedDataGridView1.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.paginatedDataGridView1.DataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paginatedDataGridView1.DataGrid.Location = new System.Drawing.Point(0, 0);
+            this.paginatedDataGridView1.DataGrid.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.paginatedDataGridView1.DataGrid.Name = "";
+            this.paginatedDataGridView1.DataGrid.RowHeadersVisible = false;
+            this.paginatedDataGridView1.DataGrid.Size = new System.Drawing.Size(680, 235);
+            this.paginatedDataGridView1.DataGrid.TabIndex = 0;
+            this.paginatedDataGridView1.Font = new System.Drawing.Font("Lucida Fax", 12F);
+            this.paginatedDataGridView1.Location = new System.Drawing.Point(355, 403);
+            this.paginatedDataGridView1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.paginatedDataGridView1.Name = "paginatedDataGridView1";
+            this.paginatedDataGridView1.PageInfoTop = 22;
+            this.paginatedDataGridView1.Size = new System.Drawing.Size(680, 297);
+            this.paginatedDataGridView1.TabIndex = 25;
             // 
             // renCircularProgressBar3
             // 
@@ -128,7 +173,7 @@
             this.pnlTitle.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pnlTitle.Location = new System.Drawing.Point(0, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(813, 46);
+            this.pnlTitle.Size = new System.Drawing.Size(1049, 46);
             this.pnlTitle.TabIndex = 3;
             this.pnlTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitle_MouseDown);
             // 
@@ -149,7 +194,7 @@
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(765, 3);
+            this.btnClose.Location = new System.Drawing.Point(1001, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(36, 36);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -216,6 +261,7 @@
             this.renTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.renTextBox3.Location = new System.Drawing.Point(258, 92);
             this.renTextBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.renTextBox3.MaxLength = 32767;
             this.renTextBox3.Multiline = true;
             this.renTextBox3.Name = "renTextBox3";
             this.renTextBox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -238,6 +284,7 @@
             this.renTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.renTextBox2.Location = new System.Drawing.Point(258, 244);
             this.renTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.renTextBox2.MaxLength = 32767;
             this.renTextBox2.Multiline = false;
             this.renTextBox2.Name = "renTextBox2";
             this.renTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -261,6 +308,7 @@
             this.renTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.renTextBox1.Location = new System.Drawing.Point(258, 53);
             this.renTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.renTextBox1.MaxLength = 32767;
             this.renTextBox1.Multiline = false;
             this.renTextBox1.Name = "renTextBox1";
             this.renTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -474,7 +522,9 @@
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(813, 575);
+            this.ClientSize = new System.Drawing.Size(1049, 707);
+            this.Controls.Add(this.paginatedDataGridView1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.renCircularProgressBar3);
             this.Controls.Add(this.renCircularProgressBar2);
@@ -501,6 +551,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paginatedDataGridView1.DataGrid)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
@@ -541,6 +592,8 @@
         private RenComponent.RenCircularProgressBar renCircularProgressBar1;
         private System.Windows.Forms.TrackBar trackBar1;
         private RenComponent.RenEllipse renEllipse1;
+        private System.Windows.Forms.Button button1;
+        private RenComponent.PaginatedDataGridView paginatedDataGridView1;
     }
 }
 

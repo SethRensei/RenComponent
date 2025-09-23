@@ -23,6 +23,7 @@ namespace RenComponent
         private string placeholderText = "";
         private bool isPlaceholder = false;
         private bool isPasswordChar = false;
+        private int maxLength = 32767;
 
         //Events
         public event EventHandler _TextChanged;
@@ -87,6 +88,17 @@ namespace RenComponent
                 isPasswordChar = value;
                 if (!isPlaceholder)
                     textBox1.UseSystemPasswordChar = value;
+            }
+        }
+
+        [Category("Ren Control")]
+        public int MaxLength
+        {
+            get => maxLength;
+            set
+            {
+                maxLength = value;
+                textBox1.MaxLength = value;
             }
         }
 

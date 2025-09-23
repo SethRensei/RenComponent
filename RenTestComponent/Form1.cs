@@ -1,5 +1,7 @@
-﻿using System;
+﻿using RenComponent;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -24,6 +26,17 @@ namespace RenTestComponent
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            var dt = new DataTable();
+            dt.Columns.Add("ID", typeof(int));
+            dt.Columns.Add("Nom", typeof(string));
+            dt.Columns.Add("Email", typeof(string));
+
+            for (int i = 1; i <= 105; i++)
+            {
+                dt.Rows.Add(i, $"Utilisateur {i}", $"user{i}@exemple.com");
+            }
+            // 3. Assigner la source de données
+            paginatedDataGridView1.SetData(dt);
             List<Person> people = new List<Person>()
             {
                 new Person() { Id =  1, Name = "Alice"    }, new Person() { Id =  2, Name = "Bob"      },
